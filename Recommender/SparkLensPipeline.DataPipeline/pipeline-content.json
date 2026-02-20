@@ -1,0 +1,48 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "b7005d17-3f02-b560-4d61-92f10d300a89",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "kustoUri": {
+              "value": {
+                "value": "@pipeline().parameters.KustoURIfqdn",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "database": {
+              "value": {
+                "value": "@pipeline().parameters.KQLDatabase",
+                "type": "Expression"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "SparkLens",
+        "dependsOn": []
+      }
+    ],
+    "parameters": {
+      "KustoURIfqdn": {
+        "type": "String",
+        "defaultValue": "https://trd-t8w8qyxhjgf76utzcg.z7.kusto.fabric.microsoft.com"
+      },
+      "KQLDatabase": {
+        "type": "string",
+        "defaultValue": "Spark Monitoring"
+      }
+    }
+  }
+}

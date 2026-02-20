@@ -35,12 +35,12 @@
 
 # CELL ********************
 
-workspace_name = "Fabric Spark Monitoring"
-capacity_name= ""
+workspace_name = "rti spark monitoring studio jumpstart"
+capacity_name= "Trial-20260220T071057Z-zJi41EsNAkaKJHc4sV8fsA"
 eventhouse_name = "fabric-spark-monitoring"
 
 environments = [
-    {"workspace_id": "", "environment_id": ""},
+    {"workspace_id": "3891496c-b48f-491a-82d7-27bcb6688e11", "environment_id": "74aadd9e-5e2d-48cb-a81b-4ebb477efe6c"},
 ]
 
 # METADATA ********************
